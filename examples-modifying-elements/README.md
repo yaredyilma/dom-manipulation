@@ -1,5 +1,7 @@
 # __Examples__: modifying elements
 
+> [study these live](https://hackyourfuture.be/dom-manipulation/examples-modifying-elements)
+
 * [remove a child](./remove-a-child.html)
 * [`ul` to `ol`](./ul-to-ol.html)
 * [update `ul`: manual](./update-ul-manual.html)
