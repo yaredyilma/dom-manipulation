@@ -5,8 +5,8 @@
 <head>
   <meta charset="utf-8">
 
-  <title>update UL manually example</title>
-  <meta name="description" content="update UL manually example">
+  <title>manual UL example</title>
+  <meta name="description" content="manual UL example">
 
   <link href="../dependencies/mocha/mocha.css" rel="stylesheet" />
   <script src="../dependencies/mocha/mocha.js"></script>
@@ -21,7 +21,7 @@
 <body>
 
   <header>
-    <h2>update UL manually example</h2>
+    <h2>manual UL example</h2>
   </header>
 
   <section class='things-to-study'>
@@ -36,22 +36,31 @@
         </ul>
       </div>
       <br>
-      <div id='replication'>
-        <h1>a list of things</h1>
-        <ul>
-          <li>pigs</li>
-          <li>chairs</li>
-          <li>a carpet</li>
-        </ul>
-      </div>
+      <div id='replication'></div>
       <br>
       <script id='DOM manipulation script'>
-        const replication = document.getElementById('replication')
-        const ulEl = replication.children[1];
+       const h1El = document.createElement("h1");
+h1El.innerText = "a list of things";
 
-        ulEl.children[0].innerText = 'robots';
-        ulEl.children[1].innerText = 'solar systems';
-        ulEl.children[2].innerText = 'oil';
+const things = ["robots", "solar systems", "oil"];
+
+const ulEl = document.createElement("ul");
+
+const li_1 = document.createElement("li");
+li_1.innerText = things[0];
+ulEl.appendChild(li_1);
+
+const li_2 = document.createElement("li");
+li_2.innerText = things[1];
+ulEl.appendChild(li_2);
+
+const li_3 = document.createElement("li");
+li_3.innerText = things[2];
+ulEl.appendChild(li_3);
+
+const replication = document.getElementById("replication");
+replication.appendChild(h1El);
+replication.appendChild(ulEl);
       </script>
 
     </div>
